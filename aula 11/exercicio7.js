@@ -1,18 +1,29 @@
 const prompt = require("prompt-sync")();
 
 let saldo = 1000;
+let running = true;
 
-menu = parseInt(prompt("Escolha uma opção: 1 - Verificar saldo 2 - Depositar 3 - Sacar 4 - Sair"))
+while (running) {
+    console.log("\nMenu de Atendimento");
+    console.log("1 - Verificar saldo");
+    console.log("2 - Depositar");
+    console.log("3 - Sacar");
+    console.log("4 - Sair");
 
-while (opcao !== 4) {
-switch (menu) {
-    case 1: console.log("1 - Verificar saldo");
+    let escolha = prompt("Escolha uma opção: ");
+
+switch (escolha) {
+    case '1': console.log(`Seu saldo é: R$${saldo}`);
     break;
-    case 2: console.log("2 - Depositar");
+    case '2': console.log(`Transferindo para um de nossos atendente`);
     break;
-    case 3: console.log("3 - Sacar");
+    case '3': console.log(`Transferindo para área de saque`);
     break;
-    case 4: console.log("4 - Sair");
+    case '4': console.log(`Obrigado por usar o sistema. Até logo!`);
+    running = false;
     break;
+    default:
+        console.log("Opção inválida. Por favor, escolha uma opção válida.")
+        break;
     }
 }

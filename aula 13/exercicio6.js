@@ -6,15 +6,15 @@
 let scores = {
     player1: 2,
     player2: 5,
-    player3: 1
+    player3: 1,
 };
 
-let totalPoints = 0;
+let total = 0;
 
 for (let player in scores) {
-    totalPoints += scores[player];
+    total += scores[player];
 }
 
-console.log("Total Points: " + totalPoints);
+console.log("Total score: " + total);
 
 
